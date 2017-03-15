@@ -24,6 +24,7 @@ Version: 17.03.15
 End Rem
 ' 15.02.17 - Initial version
 ' 16.12.08 - Several enhancements
+' 17.03.15 - Fixed "hide" bug.
 
 
 Rem
@@ -446,8 +447,14 @@ HideGadget win
 Local recname$ = Upper(MaxGUI_Input("Please give your entry a name:","",True,"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ_01234567890"))
 Local cnt=-1,nidx,K$
 ShowGadget win
-If Not MaxGUI_InputAccepted Return
-If Not recname Return
+If Not MaxGUI_InputAccepted 
+	ShowGadget win 
+	Return
+EndIf	
+If Not recname 
+	ShowGadget win
+	Return
+EndIf	
 If MapContains(recs,recname) 
 	If Not Confirm("A record with called ~q"+recname+"~q already exists!~n~nDo you wish To overwrite this record?") Return
 	EndIf
@@ -475,8 +482,8 @@ Function RenameRecord()
 HideGadget win
 Local recname$ = Upper(MaxGUI_Input("Please give your entry a new name:",CurrentRec,True,"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_01234567890"))
 Local cnt=-1,nidx,K$
-If Not recname Return
 ShowGadget win
+If Not recname Return
 If recname=currentrec Return
 If MapContains(recs,recname) Return Notify("Same named record already exists!")
 MapInsert Recs,RecName,Rec(CurrentRec)
