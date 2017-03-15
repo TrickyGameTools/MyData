@@ -1,0 +1,11 @@
+Databases
+MKL_Backup
+*.mkl
+*.app
+*.exe
+*.BK!
+Test
+*.7z
+.DS_Store
+._*
+.bmx
