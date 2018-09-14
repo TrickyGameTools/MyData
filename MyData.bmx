@@ -4,7 +4,7 @@ Rem
 	
 	
 	
-	(c) Jeroen P. Broks, 2015, 2016, 2017, All rights reserved
+	(c) Jeroen P. Broks, 2015, 2016, 2017, 2018, All rights reserved
 	
 		This program is free software: you can redistribute it and/or modify
 		it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@ Rem
 		
 	Exceptions to the standard GNU license are available with Jeroen's written permission given prior 
 	to the project the exceptions are needed for.
-Version: 17.03.15
+Version: 18.03.11
 End Rem
 ' 15.02.17 - Initial version
 ' 16.12.08 - Several enhancements
@@ -54,7 +54,7 @@ Import    jcr6.realdir
 
 Incbin "MyData.png"
 
-MKL_Version "MyData - MyData.bmx","17.03.15"
+MKL_Version "MyData - MyData.bmx","18.03.11"
 MKL_Lic     "MyData - MyData.bmx","GNU General Public License 3"
 
 AppTitle = "MyData v"+MKL_NewestVersion()
